@@ -14,23 +14,36 @@ white = "#FFFFFF"
 center_size = 80
 corner_size = 28
 
-def round_corner(radius, fill):
-    """Draw a round corner"""
-    corner = Image.new('RGBA', (radius, radius), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(corner)
-    draw.pieslice((0, 0, radius * 2, radius * 2), 180, 270, fill=fill)
-    return corner
- 
-def round_rectangle(size, radius, fill):
-    """Draw a rounded rectangle"""
-    width, height = size
-    rectangle = Image.new('RGBA', size, fill)
-    corner = round_corner(radius, fill)
-    rectangle.paste(corner, (0, 0))
-    rectangle.paste(corner.rotate(90), (0, height - radius)) # Rotate the corner and paste it
-    rectangle.paste(corner.rotate(180), (width - radius, height - radius))
-    rectangle.paste(corner.rotate(270), (width - radius, 0))
-    return rectangle
+def draw_reference_card(cards):
+    ref_width = 240
+    ref_height = 75
+    svg = f'<svg viewBox="0 0 {ref_width} {ref_height}" xmlns="http://www.w3.org/2000/svg">\n'
+
+    box_dim = 20
+
+    drawn = 0
+    x = 0
+    y = 0
+    for card in cards:
+        points = card.get("points")
+        if points > 0:
+            background_color = card.get("bg_color")
+            text_color = card.get("text_color")
+            svg += f'\t<rect x="{x}" y="{y}" width="{box_dim}" height="{box_dim}" fill="{background_color}" stroke="{black}" />\n'
+            drawn += 1
+
+            svg += f'\t<text x="{x + (box_dim / 2)}" y="{y + (box_dim / 2)}" fill="{text_color}" font-size="12" text-anchor="middle" alignment-baseline="middle">{card.get("rank")}</text>\n'
+
+            if drawn % 12 == 0:
+                y += box_dim * 1.2
+                x = 0
+            else:
+                x += box_dim
+
+    svg += '</svg>'
+
+    with open("../cards/reference_card.svg", 'w') as writer:
+        writer.write(svg)
 
 def draw_card(label, background_color, text_color, points, filename):
     # on pcio, set dimensions of card to 103x159, set border=no and rounded=yes options
@@ -131,6 +144,8 @@ if __name__ == "__main__":
         filename = f"../cards/bottleimp_{zeroed_rank}.svg"
         draw_card(card_rank, card_color, text_color, card_points, filename)
         csv_rows.append((f"bottleimp_{zeroed_rank}",f"https://raw.githubusercontent.com/DookTibs/pcio/master/bottle_imp/cards/bottleimp_{zeroed_rank}.svg"))
+
+    draw_reference_card(cards)
 
 
     if len(csv_rows) > 0:
