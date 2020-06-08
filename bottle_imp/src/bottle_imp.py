@@ -126,7 +126,7 @@ if __name__ == "__main__":
         zeroed_rank = "0" + str(card_rank) if card_rank < 10 else str(card_rank)
         filename = f"../cards/bottleimp_{zeroed_rank}.svg"
         draw_card(card_rank, card_color, card_points, filename)
-        csv_rows.append((f"bottleimp_{zeroed_rank}",f"https://raw.githubusercontent.com/DookTibs/pcio/master/bottle_imp/cards/{zeroed_rank}.svg"))
+        csv_rows.append((f"bottleimp_{zeroed_rank}",f"https://raw.githubusercontent.com/DookTibs/pcio/master/bottle_imp/cards/bottleimp_{zeroed_rank}.svg"))
 
 
     if len(csv_rows) > 0:
