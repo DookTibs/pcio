@@ -1,0 +1,32 @@
+<svg viewBox="0 0 150 10" xmlns="http://www.w3.org/2000/svg">
+	<rect x="0" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="5.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">1</text>
+	<rect x="10" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="15.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">2</text>
+	<rect x="20" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="25.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">3</text>
+	<rect x="30" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="35.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">4</text>
+	<rect x="40" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="45.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">5</text>
+	<rect x="50" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="55.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">6</text>
+	<rect x="60" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="65.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">7</text>
+	<rect x="70" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="75.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">8</text>
+	<rect x="80" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="85.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">9</text>
+	<rect x="90" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="95.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">10</text>
+	<rect x="100" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="105.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">11</text>
+	<rect x="110" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="115.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">12</text>
+	<rect x="120" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="125.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">13</text>
+	<rect x="130" y="0" width="10" height="10" fill="#0000FF" stroke="#000000" />
+	<text x="135.0" y="6.0" fill="#FFFFFF" font-size="9" text-anchor="middle" alignment-baseline="middle">14</text>
+	<rect x="140" y="0" width="10" height="10" fill="#FFFFFF" stroke="#000000" />
+	<text x="145.0" y="6.0" fill="#0000FF" font-size="9" text-anchor="middle" alignment-baseline="middle">15</text>
+</svg>
