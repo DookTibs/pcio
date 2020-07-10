@@ -14,35 +14,40 @@ green = "#61C668"
 center_size = 80
 corner_size = 28
 
-def draw_reference_card(cards):
-    ref_width = 240
+def draw_strength_marker():
+    ref_width = 140
     ref_height = 75
     svg = f'<svg viewBox="0 0 {ref_width} {ref_height}" xmlns="http://www.w3.org/2000/svg">\n'
 
-    box_dim = 20
+    foo = 10
 
-    drawn = 0
-    x = 0
-    y = 0
-    for card in cards:
-        points = card.get("points")
-        if points > 0:
-            background_color = card.get("bg_color")
-            text_color = card.get("text_color")
-            svg += f'\t<rect x="{x}" y="{y}" width="{box_dim}" height="{box_dim}" fill="{background_color}" stroke="{black}" />\n'
-            drawn += 1
+    svg += f'\t<text x="70" y="{foo}" fill="black" font-size="12" text-anchor="middle" alignment-baseline="middle">UNKNOWN</text>\n'
+    foo+=3.5
+    svg += f'\t<line x1="0" y1="{foo}" x2="135" y2="{foo}" stroke="black"/>'
 
-            svg += f'\t<text x="{x + (box_dim / 2)}" y="{y + (box_dim / 2)}" fill="{text_color}" font-size="12" text-anchor="middle" alignment-baseline="middle">{card.get("rank")}</text>\n'
+    foo = 20
 
-            if drawn % 12 == 0:
-                y += box_dim * 1.2
-                x = 0
-            else:
-                x += box_dim
+    svg += f'\t<text x="0" y="{foo}" fill="black" font-size="12" text-anchor="left" alignment-baseline="middle">STRONG</text>\n'
+    svg += f'\t<text x="100" y="{foo}" fill="black" font-size="12" text-anchor="left" alignment-baseline="middle">WEAK</text>\n'
+
+    line_start = 50
+    line_end = 100
+    line_y = foo-1
+    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_end}" y2="{line_y}" stroke="black"/>'
+
+    arrow_height = 4
+    arrow_draw = 5
+    line_start += .3
+    line_end -= .3
+    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_start + arrow_draw}" y2="{line_y - arrow_height}" stroke="black"/>'
+    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_start + arrow_draw}" y2="{line_y + arrow_height}" stroke="black"/>'
+
+    svg += f'\t<line x1="{line_end}" y1="{line_y}" x2="{line_end - arrow_draw}" y2="{line_y - arrow_height}" stroke="black"/>'
+    svg += f'\t<line x1="{line_end}" y1="{line_y}" x2="{line_end - arrow_draw}" y2="{line_y + arrow_height}" stroke="black"/>'
 
     svg += '</svg>'
 
-    with open("../cards/reference_card.svg", 'w') as writer:
+    with open("../cards/strength_board.svg", 'w') as writer:
         writer.write(svg)
 
 def generate_image_embed_tags(icon, x, y, scale_factor = 1, flipped = False):
@@ -118,7 +123,7 @@ if __name__ == "__main__":
         csv_rows.append((f"maskmen_{suit_name}",f"https://raw.githubusercontent.com/DookTibs/pcio/master/maskmen/cards/maskmen_{suit_name}.svg"))
 
     # todo - spit out a "STRONG <---------> WEAK" reference card
-    # draw_reference_card(cards)
+    draw_strength_marker()
 
     if len(csv_rows) > 0:
         with open("../cards/cards.csv", 'w', newline='') as csvfile:
