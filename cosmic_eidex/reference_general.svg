@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<svg viewBox="0 0 206 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="206" height="320" fill="#FFFFFF" stroke-width="3" stroke="#000000" rx="8" />
+
+  <foreignObject x="0" y="10" width="206" height="320">
+	<style>
+		* {
+			font-size: .9em;
+			color: black;
+		}
+	</style>
+    <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Last Card Dealt turned up before going to dealer:
+		<ul>
+			<li><b>A</b>: Topdown Game</li>
+			<li><b>6</b>: Bottomup Game</li>
+			<li><b>Other</b>: Trump suit for Normal game</li>
+		</ul>
+	</p>
+
+	<p>Face down card to start trick pile.
+	Trump if desired without regard to following suit.
+	Must overtrump if trumping, unless J is only remaining trump</p>
+
+	<p>Scoring:
+	<ul>
+		<li>157 trick points per hand</li>
+		<li>2 VP awarded per hand</li>
+		<li>Win all tricks=2 VP</li>
+		<li>1 Player >100 trick points:  Opponents 1 VP each</li>
+		<li>No player >100 trick points:  High and Low player 1 VP each</li>
+		<li>2 players tied:  Opponent=2 VP</li>
+		<li>play to 7 VP</li>
+		<li>Two players tied at 6 VP -> 7VP?: Lower score is relegated to 5 VP.</li>
+		<li>All players tied at 6 VP?: Win game with 2 VP hand OR 0 VP hand</li>
+	</ul>
+	</p>
+
+    </body>
+  </foreignObject>
+
+</svg>

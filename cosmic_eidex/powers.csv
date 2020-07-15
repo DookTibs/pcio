@@ -1,0 +1,37 @@
+label,image,power_title,power_desc,priority
+Ace of Lizard/Diamonds,,Dealer,"Before each trick, you may exchange your hand with another player, if you both agree.",1
+Ace of Raven/Clubs,,Jiu-Jitsu,"Once per game, swap the rank of two cards in a trick that are next to each other in rank order.",2
+Ace of Hearts,,Ultimo,"If you want, you may take the last trick. If Justice is playing, you only get your own card and the +5 last trick.",3
+Ace of Stars/Spade,,Trumphator,You may reject the trump suit and make the card dealt second-to-last (without looking at it) determine the trump suit.,4
+K of Lizard/Diamonds,,Computer,You may add or subtract 5 points to your score at the end of the game.,5
+K of Raven/Clubs,,Thief,"You may steal the trump card & give the dealer a card. If you're dealing, you may force the player with the 6 of trump to do this.",6
+K of Hearts,,Peeping Tom,"Once per game you may ask another player to show you 5 cards from their hand.",7
+K of Stars/Spade,,Quizmaster,"After each trick, you may ask an opponent a question about their cards. They cannot lie. You may disclose info about your own hand.",8
+Q of Lizard/Diamonds,,Feminist,"You may refuse to take a trick containing both a Q, and a K or J. If used, second highest cards in the trick wins it.",9
+Q of Raven/Clubs,,Shyness,"Once per game you may refuse to lead a trick. Instead, pick a card randomly from another player. They can veto the first pick but not the second.",10
+Q of Hearts,,Tea Party,"After every player puts down their hidden card, you may take a card from each other player. After looking, give them each any card back.",11
+Q of Stars/Spade,,Justice,"Once per game, for the next two tricks players get their cards back for scoring purposes. High card still wins lead.",12
+J of Lizard/Diamonds,,Skater,"You may call Skat any time: trumps only playable if you cannot follow suit; 10s rank between ace and king. This lasts til the end of this game.",13
+J of Raven/Clubs,,Old Maid,"You may call before players put down their hidden card. Player winning the trick containing J of clubs loses. See rules for caveats.",14
+J of Hearts,,Fond of Suits,"You may ask for a certain suit to be lead twice during the game. This cannot be refused.",15
+J of Stars/Spade,,Agitator,"You may declare a double trick once per game - each player plays a second (legal) card. Highest card takes all six cards in the trick.",16
+10 of Lizard/Diamonds,,Differentiator,"Before the first trick, you may guess the number of points you will make. If you take 1+ tricks and match your guess, you get the 2VP.",17
+10 of Raven/Clubs,,Cop,"With the lead, you may ask for a certain card once per game; if a player can legally play it, they must. You cannot wish for the Old Maid if in effect.",18
+10 of Hearts,,Social Security,"You may award any trick of <=3 points to any player, including yourself. See rules for caveats.",19
+10 of Stars/Spade,,Wisdom,"You may reveal cards in your hand before the first trick for bonus points to add to or subtract from your final score. See rules for caveats.",20
+9 of Lizard/Diamonds,,Laser,"Your randomly draw the face-down card for the other players. If another player leads the first trick, you randomly draw that too.",21
+9 of Raven/Clubs,,Speed Limit,"Before putting down cards, you may change the point limit from 100 trick points to anything between 80 and 120 points.",22
+9 of Hearts,,Consumer Protection,"Once per game you may reject a card; a different card must be played in that trick by the affected player.",23
+9 of Stars/Spade,,Seer,"After the other players have put down their hidden card, you may look at them. You see the lead before putting your card down. See rules for caveats.",24
+8 of Lizard/Diamonds,,Revalue,"After cards are put down, you may declare an arbitrary card to be either high or low in that suit; you cannot possess this card.",25
+8 of Raven/Clubs,,Zombie,"Once per game after at least two players have won tricks, you may force every player to pick up a card from the last trick they won (or their facedown card).",26
+8 of Hearts,,Excuse,"You may not follow suit once per game, and instead play a non-trump card with value 3 or less instead.",27
+8 of Stars/Spade,,Cheater,"As long as you have 4+ cards in hand, you may exchange a card from your hand with the card you put down in the beginning.",28
+7 of Lizard/Diamonds,,Rejector,"Once per game you may reject a trick; all players take their played card back. You may then lead the replay, if you want.",29
+7 of Raven/Clubs,,Grave Robber,"After each player puts down their one card, you may take the card another player played and replace it with one of yours. The target may look at it.",30
+7 of Hearts,,Guggitaler,"Before the first trick you may change the game: K of spades is worth 4 points and hearts are worth 1 point each. See rules for caveats.",31
+7 of Stars/Spade,,Jackpot,"You may call 'Jackpot: 7 of hearts or spades' and start it with your facedown card. Tricks with only diamonds and clubs add to it. See rules for caveats.",32
+6 of Lizard/Diamonds,,Compass,"You may determine the direction of play before the first trick is played. You may change the direction two more times per game.",33
+6 of Raven/Clubs,,Black Friday,"After cards are put down, you may name a suit. Card points from it are transferred to the matching card in clubs. Ranks stay the same. See rules for caveats.",34
+6 of Hearts,,Wishbone,"You may ask for a specific card before players put their card down. The donor draws a random card out of your hand.",35
+6 of Stars/Spade,,Sphinx,"You may play a card face down up to twice per game. You must truthfully tell everyone who wins the trick, and the suit if you led.",36
