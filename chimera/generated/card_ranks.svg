@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<svg viewBox="0 0 250 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="250" height="330" fill="#FFFFFF" stroke-width="3" stroke="#000000" rx="8" />
+
+  <foreignObject x="0" y="2" width="250" height="330">
+	<style>
+		ul {
+		margin-top: 2px;
+		}
+		li {
+			font-size: .5em;
+		}
+		td {
+			color: black;
+			font-size: .5em;
+			text-align: left;
+		}
+		td.heading {
+			text-align: right;
+			font-weight: bold;
+		}
+	</style>
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <table border="1">
+		<tr> <td class="heading" width="50%">Single</td> <td>5</td> </tr>
+		<tr> <td class="heading">Pair</td> <td>88</td> </tr>
+		<tr> <td class="heading">Sequence of 3+ pairs</td> <td> 77 88 99 </td> </tr>
+		<tr> <td class="heading">Triplet</td> <td>222</td> </tr>
+		<tr> <td class="heading">Sequence of 2+ triplets</td> <td> 111 222</td> </tr>
+		<tr> <td class="heading">Triplet w/ attached card</td> <td>111 6</td> </tr>
+		<tr> <td class="heading">Triplet w/ attached pair</td> <td>999 HH</td> </tr>
+		<tr> <td class="heading">Sequence of triplets w/ attached cards</td> <td>111 6 222 9</td> </tr>
+		<tr> <td class="heading">Sequence of triplets w/ attached pairs</td> <td>666 22 777 HH</td> </tr>
+		<tr> <td class="heading">Straight (5+)</td> <td>12345</td> </tr>
+		<tr> <td class="heading">Quad w/ 2 singles attached</td> <td>7777 2 9</td> </tr>
+		<tr> <td class="heading">Quad w/ 2 pairs attached</td> <td>7777 HH 88</td> </tr>
+		<tr> <td class="heading">Trap (4 of a kind)</td> <td>7777</td> </tr>
+		<tr> <td class="heading">Chimera Flight</td> <td>C P</td> </tr>
+	  </table>
+	  <ul>
+	  <li>H outranks 12 but has no numerical value (so cannot be used in sequences except as attached cards).</li>
+	  <li>P outranks all but C. Can be used as single or as a wildcard in straights only.</li>
+	  <li>C is highest single card.</li>
+	  <li>Suits do not matter.</li>
+	  <li>Traps / Chimera Flight are only played in turn.</li>
+	  </ul>
+    </body>
+  </foreignObject>
+
+
+</svg>

@@ -4,86 +4,24 @@ factor = 1
 width = 103 * factor
 height = 160 * factor
 
+"""
 blue = "#1564B3"
 red = "#97151C"
 green = "#205E42"
 black = "#000000"
 white = "#FFFFFF"
 gold = "#FFD700"
+"""
+blue = "#0000FF"
+red = "#CF4F3D"
+green = "#95C990"
+black = "#000000"
+white = "#FFFFFF"
+gold = "#FFD700"
+purple = "#923AE7"
 
 center_size = 80
 corner_size = 28
-
-def draw_strength_marker():
-    ref_width = 140
-    ref_height = 75
-    svg = f'<svg viewBox="0 0 {ref_width} {ref_height}" xmlns="http://www.w3.org/2000/svg">\n'
-
-    foo = 10
-
-    svg += f'\t<text x="70" y="{foo}" fill="black" font-size="12" text-anchor="middle" alignment-baseline="middle">UNKNOWN</text>\n'
-    foo+=3.5
-    svg += f'\t<line x1="0" y1="{foo}" x2="135" y2="{foo}" stroke="black"/>'
-
-    foo = 20
-
-    svg += f'\t<text x="0" y="{foo}" fill="black" font-size="12" text-anchor="left" alignment-baseline="middle">STRONG</text>\n'
-    svg += f'\t<text x="100" y="{foo}" fill="black" font-size="12" text-anchor="left" alignment-baseline="middle">WEAK</text>\n'
-
-    line_start = 50
-    line_end = 100
-    line_y = foo-1
-    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_end}" y2="{line_y}" stroke="black"/>'
-
-    arrow_height = 4
-    arrow_draw = 5
-    line_start += .3
-    line_end -= .3
-    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_start + arrow_draw}" y2="{line_y - arrow_height}" stroke="black"/>'
-    svg += f'\t<line x1="{line_start}" y1="{line_y}" x2="{line_start + arrow_draw}" y2="{line_y + arrow_height}" stroke="black"/>'
-
-    svg += f'\t<line x1="{line_end}" y1="{line_y}" x2="{line_end - arrow_draw}" y2="{line_y - arrow_height}" stroke="black"/>'
-    svg += f'\t<line x1="{line_end}" y1="{line_y}" x2="{line_end - arrow_draw}" y2="{line_y + arrow_height}" stroke="black"/>'
-
-    svg += '</svg>'
-
-    with open("../cards/strength_board.svg", 'w') as writer:
-        writer.write(svg)
-
-"""
-def generate_image_embed_tags(icon, x, y, scale_factor = 1, flipped = False):
-    # image - just referencing the image tends to not work, either in display or when
-    # exporting to png. So instead we read the contents of the image and base64encode it,
-    # and include it inline.
-    encoded_img = None
-
-    # use maskmen images
-    real_or_fake = "_oink"
-
-    # use real wrestlers
-    # real_or_fake = "_real"
-
-    try:
-        with open(f"../images/{icon}{real_or_fake}.png", "rb") as img_file:
-            encoded_img = base64.b64encode(img_file.read())
-            encoded_img = encoded_img.decode('utf-8')
-    except Exception as e:
-        print(f"ERRO: {e}")
-
-    img_w = 80
-    img_h = 140
-
-    img_w *= scale_factor
-    img_h *= scale_factor
-
-    translate_x = img_w * -.5
-    translate_y = img_h * -.5
-
-    # return f'\t<image x="{x}" y="{y}" transform="translate({translate_x}, {translate_y})" xlink:href="data:image/png;base64,{encoded_img}" height="{img_h}" width="{img_w}"/>\n'
-    transform = f"translate({translate_x}, {translate_y})"
-
-    return f'\t<image x="{x}" y="{y}" transform="{transform}" xlink:href="data:image/png;base64,{encoded_img}" height="{img_h}" width="{img_w}"/>\n'
-"""
 
 def load_external_svg(icon):
     print(f"loading {icon}...")
@@ -94,6 +32,21 @@ def load_external_svg(icon):
     except Exception as e:
         print(f"ERRO: {e}")
 
+def draw_bid(bid_amt, filename):
+    stroke_width = 1
+
+    background_color = white
+    
+    dim = 50
+    svg = f'<svg viewBox="0 0 {dim} {dim}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n'
+
+    svg += f'\t<text x="{dim/2}" y="{dim/2}" fill="{black}" font-size="24" text-anchor="middle" alignment-baseline="middle">{bid_amt}</text>\n'
+
+    svg += '</svg>'
+
+    with open(filename, 'w') as writer:
+        writer.write(svg)
+
 def draw_card(card_data, filename):
     # on pcio, set dimensions of card to 103x159, set border=no and rounded=yes options
     stroke_width = 3
@@ -102,7 +55,7 @@ def draw_card(card_data, filename):
     card_val = card_data["rank"]["strength"]
     points = card_data["rank"].get("points")
     suit = card_data["suit"]
-    text_color = suit["color"] if suit is not None else gold
+    text_color = suit["color"] if suit is not None else purple
 
     svg = f'<svg viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n'
 
@@ -211,3 +164,18 @@ if __name__ == "__main__":
     with open("../generated/cards.csv", 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerows(csv_rows)
+
+    # now do bid "cards"
+    csv_rows = []
+    csv_rows.append(("label","image","back_image"))
+    for bid in [ 20, 30, 40 ]:
+        filename = f"../generated/chimera_bid_{bid}.svg"
+        draw_bid(bid, filename)
+        img_url = f"https://raw.githubusercontent.com/DookTibs/pcio/master/chimera/generated/chimera_bid_{bid}.svg"
+        csv_rows.append((f"chimera_bid_{bid}",img_url, img_url))
+
+    with open("../generated/bid_cards.csv", 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerows(csv_rows)
+
+    draw_reference_card("../generated/card_ranks.svg")
