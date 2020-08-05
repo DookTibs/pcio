@@ -46,4 +46,4 @@ def draw_ruler(max_val):
         writer.write(svg)
 
 if __name__ == "__main__":
-    draw_ruler(15)
+    draw_ruler(20)
