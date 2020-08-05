@@ -5,9 +5,12 @@ factor = 1
 width = 103 * factor
 height = 160 * factor
 
-red = "#FF0000"
-yellow = "#FFFF00"
-blue = "#0000FF"
+# red = "#FF0000"
+# yellow = "#FFFF00"
+# blue = "#0000FF"
+red = "#CC3839"
+yellow = "#DEC86E"
+blue = "#4499D6"
 black = "#000000"
 white = "#FFFFFF"
 
