@@ -1,4 +1,4 @@
-<svg id="color-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="color-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="1600" xmlns:xlink="http://www.w3.org/1999/xlink">
 <polygon style="fill: black" points="50.0,1.0 92.43524478543749,25.5 92.43524478543749,74.5 50.0,99.0 7.56475521456251,74.5 7.56475521456251,25.5"></polygon>
 <polygon style="fill: red" points="50.0,3.0 90.70319397786861,26.5 90.70319397786861,73.5 50.0,97.0 9.296806022131385,73.5 9.296806022131385,26.5"></polygon>
 <polygon style="fill: blue" points="136.60254037844385,1.0 179.03778516388132,25.5 179.03778516388132,74.5 136.60254037844385,99.0 94.16729559300636,74.5 94.16729559300636,25.5"></polygon>
