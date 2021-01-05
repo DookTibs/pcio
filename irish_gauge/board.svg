@@ -189,4 +189,24 @@
 <polygon style="fill: #6D9160" points="1219.134295108992,830.0 1258.1054382792918,852.5 1258.1054382792918,897.5 1219.134295108992,920.0 1180.1631519386924,897.5 1180.1631519386924,852.5"></polygon>
 <text text-anchor="middle" x="1219.134295108992" y="900.0">Killarney</text><polygon style="fill: #9EA76E" points="1305.7368354874359,826.0 1348.1720802728735,850.5 1348.1720802728735,899.5 1305.7368354874359,924.0 1263.3015907019983,899.5 1263.3015907019983,850.5"></polygon>
 <polygon style="fill: #6D9160" points="1305.7368354874359,842.0 1334.3156738123223,858.5 1334.3156738123223,891.5 1305.7368354874359,908.0 1277.1579971625495,891.5 1277.1579971625495,858.5"></polygon>
+	<text fill="white" font-size="16px" x="1340" y="15" text-anchor="middle" alignment-baseline="middle">BUILD COSTS</text>
+<polygon style="fill: #9EA76E" points="1250,25 1275.980762113533,40.0 1275.980762113533,70.0 1250,85 1224.019237886467,70.0 1224.019237886467,40.0"></polygon>
+	<text fill="white" font-size="20px" x="1320" y="55" text-anchor="left" alignment-baseline="middle">1 ; 1.5</text>
+<polygon style="fill: #9EA76E" points="1250,90 1275.980762113533,105.0 1275.980762113533,135.0 1250,150 1224.019237886467,135.0 1224.019237886467,105.0"></polygon>
+<polygon style="fill: #6D9160" points="1250,100 1267.3205080756888,110.0 1267.3205080756888,130.0 1250,140 1232.6794919243112,130.0 1232.6794919243112,110.0"></polygon>
+	<text fill="white" font-size="20px" x="1320" y="120" text-anchor="left" alignment-baseline="middle">2 ; N/A</text>
+<polygon style="fill: black" points="1220,155 1245.980762113533,170.0 1245.980762113533,200.0 1220,215 1194.019237886467,200.0 1194.019237886467,170.0"></polygon>
+<polygon style="fill: #6D9160" points="1220,157 1244.2487113059642,171.0 1244.2487113059642,199.0 1220,213 1195.7512886940358,199.0 1195.7512886940358,171.0"></polygon>
+<polygon style="fill: red" points="1280,155 1305.980762113533,170.0 1305.980762113533,200.0 1280,215 1254.019237886467,200.0 1254.019237886467,170.0"></polygon>
+<polygon style="fill: #6D9160" points="1280,157 1304.2487113059642,171.0 1304.2487113059642,199.0 1280,213 1255.7512886940358,199.0 1255.7512886940358,171.0"></polygon>
+	<text fill="white" font-size="20px" x="1320" y="185" text-anchor="left" alignment-baseline="middle">1 ; 1.5</text>
+	<text fill="white" font-size="20px" x="1200" y="250" text-anchor="left" alignment-baseline="middle">&#163;12 Bonus for all</text>
+	<text fill="white" font-size="20px" x="1200" y="270" text-anchor="left" alignment-baseline="middle">red cities connected</text>
+	<text fill="white" font-size="20px" x="1200" y="300" text-anchor="left" alignment-baseline="middle">Town = no interest cube</text>
+	<text fill="white" font-size="20px" x="1200" y="320" text-anchor="left" alignment-baseline="middle">&#163;2 Income</text>
+	<text fill="white" font-size="20px" x="1200" y="350" text-anchor="left" alignment-baseline="middle">City = interest cube</text>
+	<text fill="white" font-size="20px" x="1200" y="370" text-anchor="left" alignment-baseline="middle">&#163;4 Income</text>
+	<text fill="white" font-size="20px" x="1200" y="400" text-anchor="left" alignment-baseline="middle">Lines only pay if either:</text>
+	<text fill="white" font-size="20px" x="1200" y="420" text-anchor="left" alignment-baseline="middle">   * paying city + town</text>
+	<text fill="white" font-size="20px" x="1200" y="440" text-anchor="left" alignment-baseline="middle">   * 2 paying cities</text>
 </svg>
