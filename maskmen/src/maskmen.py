@@ -57,10 +57,10 @@ def generate_image_embed_tags(icon, x, y, scale_factor = 1, flipped = False):
     encoded_img = None
 
     # use maskmen images
-    real_or_fake = ""
+    real_or_fake = "_oink"
 
     # use real wrestlers
-    real_or_fake = "_real"
+    # real_or_fake = "_real"
 
     try:
         with open(f"../images/{icon}{real_or_fake}.png", "rb") as img_file:
